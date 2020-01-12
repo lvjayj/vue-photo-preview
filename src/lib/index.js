@@ -136,7 +136,7 @@ var vuePhotoPreview ={
 					if(isNaN(options.index)) {
 						return;
 					}
-					options=this.extend(options,opts)
+					options=this.preViewExtend(options,opts)
 
 					if(disableAnimation) {
 						options.showAnimationDuration = 0;
@@ -268,7 +268,7 @@ var vuePhotoPreview ={
 					return items
 
 				},
-				extend(o1, o2) {
+				preViewExtend(o1, o2) {
 					for (var prop in o2) {
 						o1[prop] = o2[prop];
 					}
