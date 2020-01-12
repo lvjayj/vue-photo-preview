@@ -2,9 +2,9 @@
 
 > \"基于 photoswipe 的 vue 图片预览插件\"
 
-## 说明
+该项目 Fork 自https://github.com/826327700/vue-photo-preview; 原项目中使用`Vue.mixin`混入了`extend`方法，容易跟其他库产生命名冲突，故 Fork 一份修改
 
-> 该项目 Fork 自https://github.com/826327700/vue-photo-preview; 原项目中使用`Vue.mixin`混入了`extend`方法，容易跟其他库产生命名冲突，故 Fork 一份修改
+## 说明
 
 1.简化了`photoswipe`的默认设置  
 2.取消了图片需设定尺寸的要求  
@@ -94,7 +94,7 @@ Vue.use(preview)
 
 //添加对原插件 photoswipe 的事件响应，示例：
 
-```
+```javascript
 this.$preview.on('close',())=>{//close只是众多事件名的其中一个，更多请查看文档
 	console.log('图片查看器被关闭')
 })
@@ -102,9 +102,9 @@ this.$preview.on('close',())=>{//close只是众多事件名的其中一个，更
 
 //添加图片查看器实例--this.\$preview.self 注意：此实例仅在图片查看器被打开时生效
 
-```
-this.$preview.on('imageLoadComplete',(e,item)=>{
-	console.log(this.$preview.self)  //此时this.$preview.self拥有原插件photoswipe文档中的所有方法和属性
+```javascript
+this.$preview.on('imageLoadComplete', (e, item) => {
+    console.log(this.$preview.self) //此时this.$preview.self拥有原插件photoswipe文档中的所有方法和属性
 })
 ```
 
@@ -113,15 +113,15 @@ this.$preview.on('imageLoadComplete',(e,item)=>{
 
 //应性能要求 新增大图查看 large 标签填写大图路径 （插件的思路是 img 的 src 默认为缩略图），如不填写 large，则展示 src
 
-```
-<img src="xxx.jpg" large="xxx_3x.jpg" preview="2" preview-text="描述文字">
+```html
+<img src="xxx.jpg" large="xxx_3x.jpg" preview="2" preview-text="描述文字" />
 ```
 
 ### 2018-05-17 更新
 
 //如果图片是异步生成的，在图片数据更新后调用：
 
-```
+```javascript
 this.$previewRefresh()
 ```
 
