@@ -4,7 +4,7 @@
 
 ## 说明
 
-该项目 Fork 自https://github.com/826327700/vue-photo-preview，原项目中使用`Vue.mixin`混入了`extend`方法，容易跟其他库产生命名冲突，故 Fork 一份修改
+> 该项目 Fork 自https://github.com/826327700/vue-photo-preview; 原项目中使用`Vue.mixin`混入了`extend`方法，容易跟其他库产生命名冲突，故 Fork 一份修改
 
 1.简化了`photoswipe`的默认设置  
 2.取消了图片需设定尺寸的要求  
