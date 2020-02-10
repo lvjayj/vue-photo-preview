@@ -13,35 +13,34 @@
 
 ## 使用
 
+### NPM 安装
+
 ```bash
-# 安装
 npm install @mvpleung/vue-photo-preview --save
 ```
 
 ```javascript
-# 引入
-import preview from 'vue-photo-preview'
-import 'vue-photo-preview/dist/skin.css'
-Vue.use(preview)
-//或者
-//var option={....} option配置请查看 http://photoswipe.com/documentation/options.html
-//Vue.use(preview,option)
+import preview from '@mvpleung/vue-photo-preview'
+import '@mvpleung/vue-photo-preview/dist/skin.css'
+Vue.use(preview, options?) //option配置请查看 http://photoswipe.com/documentation/options.html
 ```
 
+### Script 引入
+
 ```html
-# umd
-<link rel="stylesheet" type="text/css" href="路径/dist/skin.css" />
+<link rel="stylesheet" type="text/css" href="path/dist/skin.css" />
 
 <script
-    src="路径/dist/vue-photo-preview.js"
+    src="path/dist/vue-photo-preview.js"
     type="text/javascript"
     charset="utf-8"
 ></script>
 <script type="text/javascript">
+    // 不需要自定义配置时，不需要 use
+    // 仅当需要自定义配置时，需要显示 use
     var options = {
         fullscreenEl: false //关闭全屏按钮
     }
-
     Vue.use(vuePhotoPreview, options)
 
     new Vue({
@@ -51,7 +50,8 @@ Vue.use(preview)
 ```
 
 ```html
-# html //在img标签添加preview属性 preview值相同即表示为同一组
+## 在img标签添加preview属性 preview值相同即表示为同一组
+
 <img src="xxx.jpg" preview="0" preview-text="描述文字" />
 
 //分组

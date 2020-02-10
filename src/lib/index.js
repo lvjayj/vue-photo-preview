@@ -297,3 +297,7 @@ export default vuePhotoPreview
 if (typeof window !== 'undefined' && !window.vuePhotoPreview) {
     window.vuePhotoPreview=vuePhotoPreview;
 }
+// auto install
+if (typeof window !== 'undefined' && window.Vue) {
+    vuePhotoPreview.install(window.Vue);
+}

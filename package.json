@@ -1,7 +1,7 @@
 {
   "name": "@mvpleung/vue-photo-preview",
   "description": "\"基于photoswipe的vue图片预览组件\"",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": "mvpleung <mvpleung@gmail.com>",
   "private": false,
   "license": "MIT",
